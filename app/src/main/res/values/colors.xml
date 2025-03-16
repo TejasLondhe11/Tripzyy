@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#7327FA</color>
+    <color name="red">#B1251A</color>
+    <color name="orange">#FFA500</color>
+    <color name="lavender">#D3D3FF</color>
+    <color name="periwinkle">#9da8ff</color>
+    <color name="dark_periwinkle">#7B8AFD</color>
+    <color name="maroon">#F3D5F8</color>
+    <color name="lavendar1">#8692f7</color>
+</resources>

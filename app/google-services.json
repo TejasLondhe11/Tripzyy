@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756901030480",
+    "project_id": "tripzyy-a83f0",
+    "storage_bucket": "tripzyy-a83f0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756901030480:android:d7e089c85e5326418cff55",
+        "android_client_info": {
+          "package_name": "com.travelgo.tripzyy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiX7UoPWtFfOrWIyBd09aYq0TBNcaabHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
