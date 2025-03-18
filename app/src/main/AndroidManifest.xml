@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Tripzyy"
         tools:targetApi="31">
         <activity
+            android:name="com.travelgo.tripzyy.TrialActivity"
+            android:exported="false" />
+        <activity
             android:name=".SetUpNewPasswordActivity"
             android:exported="false" />
         <activity

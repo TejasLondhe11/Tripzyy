@@ -14,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.tripzyy.R;
+
 public class SplashActivity extends AppCompatActivity {
     ImageView ivLogo;
     TextView tvTitle;
@@ -26,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        ivLogo=findViewById(R.id.ivSplashLogo);
+        ivLogo=findViewById(R.id.ivSplashLogo1);
         tvTitle=findViewById(R.id.tvSplashTitle);
         animtranslate= AnimationUtils.loadAnimation(SplashActivity.this,R.anim.toptobottomtranslate);
         ivLogo.startAnimation(animtranslate);
