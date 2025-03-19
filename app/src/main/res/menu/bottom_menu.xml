@@ -5,19 +5,21 @@
         android:title="Home"
         android:icon="@drawable/baseline_home_24"/>
     <item
-        android:id="@+id/shorts"
-        android:title="Shorts"
-        android:icon="@drawable/baseline_whatshot_24"/>
+        android:id="@+id/packages"
+        android:title="Packages"
+        android:icon="@drawable/baseline_subscriptions_24"/>
+    <item
+        android:title=""/>
 
     <item
-        android:id="@+id/subscription"
-        android:title="Subscription"
-        android:icon="@drawable/baseline_subscriptions_24"
+        android:id="@+id/vehicles"
+        android:title="Vehicles"
+        android:icon="@drawable/baseline_directions_bus_filled_24"
         />
     <item
-        android:id="@+id/library"
-        android:title="Library"
-        android:icon="@drawable/baseline_video_library_24"/>
+        android:id="@+id/payment"
+        android:title="Payment"
+        android:icon="@drawable/baseline_payment_24"/>
 
 
 </menu>

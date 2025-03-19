@@ -3,7 +3,17 @@
     <style name="Base.Theme.Tripzyy" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/lavendar1</item>
+        <item name="colorPrimaryVariant">@color/periwinkle</item>
+        <item name="colorOnPrimary">@color/dark_periwinkle</item>
+        <item name="colorSecondary">@color/purple</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+<style name="Theme.Tripzyy" parent="Base.Theme.Tripzyy"></style>
+<style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowEnterAnimation">@anim/slide_out</item>
     </style>
 
-    <style name="Theme.Tripzyy" parent="Base.Theme.Tripzyy" />
+
 </resources>

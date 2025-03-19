@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.travelgo.tripzyy.common.Urls;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -67,7 +68,7 @@ public class SetUpNewPasswordActivity extends AppCompatActivity {
                 params.put("mobileno",strMobileNo);
                 params.put("password",etNewPassword.getText().toString());
 
-                client.post("http://192.168.81.177:80/TripzyyAPI/userForgetPassword.php",params,new JsonHttpResponseHandler()
+                client.post(Urls.forgetPasswordWebService,params,new JsonHttpResponseHandler()
                 {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {

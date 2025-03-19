@@ -1,64 +1,79 @@
-package com.travelgo.tripzyy;
+package com.travelgo.tripzyy
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import com.travelgo.tripzyy.databinding.ActivityMainBinding;
+import android.view.MenuItem;
+import android.widget.Toast;
 
-public class HomeActivity extends AppCompatActivity {
+import com.google.android.material.navigation.NavigationView;
 
-    private ActivityMainBinding binding;
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(R.layout.activity_home);
 
-        setContentView(binding.getRoot());
+        Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
+        setSupportActionBar(toolbar);
 
-        // Load HomeFragment by default
-        replaceFragment(new HomeFragment());
+        drawerLayout = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
-        // Remove background from BottomNavigationView
-        binding.bottomNavigationView.setBackground(null);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav,
+                R.string.close_nav);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
 
-        // Set up BottomNavigationView click listener
-        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-            Fragment selectedFragment = null;
-
-            switch (item.getItemId()) {
-                case R.id.home:
-                    selectedFragment = new HomeFragment();
-                    break;
-
-                case R.id.shorts:
-                    selectedFragment = new ShortsFragment();
-                    break;
-
-                case R.id.subscription:
-                    selectedFragment = new SubscriptionFragment();
-                    break;
-
-                case R.id.library:
-                    selectedFragment = new LibraryFragment();
-                    break;
-            }
-
-            if (selectedFragment != null) {
-                replaceFragment(selectedFragment);
-            }
-
-            return true;
-        });
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_home);
+        }
     }
 
-    // Method to replace fragment
-    private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
-        fragmentTransaction.commit();
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+                break;
+
+            case R.id.nav_settings:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+                break;
+
+            case R.id.nav_share:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
+                break;
+
+            case R.id.nav_about:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
+                break;
+
+            case R.id.nav_logout:
+                Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 }
