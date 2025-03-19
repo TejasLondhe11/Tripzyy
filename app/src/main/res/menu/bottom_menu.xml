@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/homeBottomNavigationHome"
+        android:id="@+id/home"
         android:title="Home"
         android:icon="@drawable/baseline_home_24"/>
     <item
-        android:id="@+id/homeBottomNavigationPackages"
+        android:id="@+id/packages"
         android:title="Packages"
         android:icon="@drawable/baseline_subscriptions_24"/>
     <item
         android:title=""/>
 
     <item
-        android:id="@+id/homeBottomNavigationVehicles"
+        android:id="@+id/vehicles"
         android:title="Vehicles"
         android:icon="@drawable/baseline_directions_bus_filled_24"
         />
     <item
-        android:id="@+id/homeBottomNavigationPayment"
+        android:id="@+id/payment"
         android:title="Payment"
         android:icon="@drawable/baseline_payment_24"/>
 
