@@ -6,7 +6,10 @@ plugins {
 android {
     namespace = "com.travelgo.tripzyy"
     compileSdk = 34
+buildFeatures {
+    viewBinding= true
 
+}
     defaultConfig {
         applicationId = "com.travelgo.tripzyy"
         minSdk = 24
@@ -26,11 +29,7 @@ android {
             )
         }
     }
-    android {
-        buildFeatures {
-            viewBinding; true;
-        }
-    }
+
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -49,6 +48,8 @@ dependencies {
     implementation(libs.support.annotations)
     implementation(libs.annotation)
     implementation(libs.legacy.support.v4)
+    implementation(libs.support.v4)
+    implementation(libs.support.v13)
     // implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
