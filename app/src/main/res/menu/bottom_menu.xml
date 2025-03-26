@@ -8,8 +8,6 @@
         android:id="@+id/homeBottomNavigationPackages"
         android:title="Packages"
         android:icon="@drawable/baseline_subscriptions_24"/>
-    <item
-        android:title=""/>
 
     <item
         android:id="@+id/homeBottomNavigationVehicles"

@@ -41,6 +41,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
 
+        bottomNavigationView = findViewById(R.id.homeBottomNavigationView);
+
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);

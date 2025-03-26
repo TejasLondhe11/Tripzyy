@@ -50,10 +50,11 @@ dependencies {
     implementation(libs.legacy.support.v4)
     implementation(libs.support.v4)
     implementation(libs.support.v13)
-    // implementation(libs.firebase.auth)
+    //implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation ("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.firebase:firebase-auth:23.2.0");
     implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
     implementation ("com.loopj.android:android-async-http:1.4.11"); //client-server communication
