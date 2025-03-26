@@ -14,12 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tripzyy"
         tools:targetApi="31">
-        <activity
-            android:name="com.travelgo.tripzyy.TrialActivity2"
-            android:exported="false" />
-        <activity
-            android:name="com.travelgo.tripzyy.TrialActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SetUpNewPasswordActivity"
             android:exported="false" />
