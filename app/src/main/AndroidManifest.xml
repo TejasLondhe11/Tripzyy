@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,13 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tripzyy"
-        tools:targetApi="31">
-        <activity
-            android:name="com.travelgo.tripzyy.TrialActivity2"
-            android:exported="false" />
-        <activity
-            android:name="com.travelgo.tripzyy.TrialActivity"
-            android:exported="false" />
+        tools:targetApi="31"
+
+        >
+
         <activity
             android:name=".SetUpNewPasswordActivity"
             android:exported="false" />

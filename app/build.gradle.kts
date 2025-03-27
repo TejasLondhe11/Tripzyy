@@ -54,8 +54,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation(libs.firebase.auth);
-    implementation(platform("com.google.firebase:firebase-bom:33.11.0"))
+    implementation("com.google.firebase:firebase-auth:23.2.0");
+    implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
     implementation ("com.loopj.android:android-async-http:1.4.11"); //client-server communication
     implementation ("com.google.android.gms:play-services-auth:21.3.0")
 

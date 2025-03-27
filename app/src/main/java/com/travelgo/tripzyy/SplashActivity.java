@@ -14,7 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.tripzyy.R;
+import com.travelgo.tripzyy.R;
 
 public class SplashActivity extends AppCompatActivity {
     ImageView ivLogo;
