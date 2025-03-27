@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ProfileActivity extends AppCompatActivity {
+public class MyProfileFragment extends AppCompatActivity {
 
     private EditText etName, etBirthday, etPhone, etInstagram, etEmail, etPassword;
     private Button btnEditProfile;
