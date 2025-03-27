@@ -10,10 +10,17 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
 <style name="Theme.Tripzyy" parent="Base.Theme.Tripzyy"></style>
-<style name="DialogAnimation">
-        <item name="android:windowEnterAnimation">@anim/slide_in</item>
-        <item name="android:windowEnterAnimation">@anim/slide_out</item>
+
+    <!-- Theme with ActionBar -->
+    <style name="Theme.Tripzyy." parent="Theme.Material3.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
     </style>
 
+    <!-- Alternative: Theme explicitly enabling ActionBar -->
+    <style name="showActionBar" parent="Theme.Material3.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
 
 </resources>
