@@ -100,7 +100,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             finishAffinity();
             super.onBackPressed();
         } else {
-            Toast.makeText(HomeActivity.this, "Press Again to Exit App", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HomeActivity.this,
+                    "Press Again to Exit App",
+                    Toast.LENGTH_SHORT).show();
             doubletap = true;
             new Handler().postDelayed(new Runnable() {
                 @Override
