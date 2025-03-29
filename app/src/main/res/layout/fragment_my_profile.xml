@@ -16,7 +16,9 @@
         android:background="@drawable/gradient_background"
         android:gravity="center"
         android:orientation="vertical">
+
         <!-- Circular Image View  -->
+
         <de.hdodenhof.circleimageview.CircleImageView
             app:civ_border_width="4dp"
             android:id="@+id/ivProfilePhoto"

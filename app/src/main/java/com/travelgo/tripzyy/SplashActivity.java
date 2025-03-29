@@ -14,13 +14,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.travelgo.tripzyy.R;
 
 public class SplashActivity extends AppCompatActivity {
     ImageView ivLogo;
-    TextView tvTitle;
 
-    Animation animtranslate,translate;
+    Animation animtranslate;
     Handler handler;
 
     @Override
@@ -28,18 +26,17 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        ivLogo=findViewById(R.id.ivSplashLogo1);
-        tvTitle=findViewById(R.id.tvSplashTitle);
+        ivLogo=findViewById(R.id.ivSplashLogo);
+
         animtranslate= AnimationUtils.loadAnimation(SplashActivity.this,R.anim.toptobottomtranslate);
         ivLogo.startAnimation(animtranslate);
-        translate=AnimationUtils.loadAnimation(SplashActivity.this,R.anim.translate);
-        tvTitle.startAnimation(translate);
+
 
         handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i= new Intent(SplashActivity.this,LoginActivity.class);
+                Intent i= new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(i);
             }
         },3000);
