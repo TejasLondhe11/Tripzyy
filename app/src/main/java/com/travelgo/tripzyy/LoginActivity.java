@@ -29,7 +29,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.travelgo.tripzyy.common.MyProfileActivity;
+import com.travelgo.tripzyy.MyProfileFragment;
 import com.travelgo.tripzyy.common.NetworkChangeListener;
 import com.travelgo.tripzyy.common.Urls;
 //import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -189,7 +189,7 @@ btnSignInWithGoogle.setOnClickListener(new View.OnClickListener() {
 
            try {
                 task.getResult(ApiException.class);
-                Intent intent = new Intent(LoginActivity.this, MyProfileActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MyProfileFragment.class);
                 startActivity(intent);
                 finish();
             } catch (ApiException e) {

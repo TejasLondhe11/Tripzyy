@@ -20,7 +20,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.travelgo.tripzyy.common.MyProfileActivity;
+import com.travelgo.tripzyy.MyProfileFragment;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
         BottomNavigationView.OnNavigationItemSelectedListener{
@@ -40,7 +40,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     PackagesFragment packagesFragment = new PackagesFragment();
     PaymentFragment paymentFragment = new PaymentFragment();
 
-    MyProfileActivity myProfileActivity = new MyProfileActivity();
+
     MyProfileFragment myProfileFragment = new MyProfileFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
     AboutFragment aboutFragment = new AboutFragment();
@@ -79,13 +79,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 if (item.getItemId() == R.id.homeBottomNavigationHome) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commit();
+                    getSupportFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container, homeFragment).commit();
                 } else if (item.getItemId() == R.id.homeBottomNavigationPayment) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, paymentFragment).commit();
+                    getSupportFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container, paymentFragment).commit();
                 } else if (item.getItemId() == R.id.homeBottomNavigationVehicles) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, vehiclesFragment).commit();
+                    getSupportFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container, vehiclesFragment).commit();
                 }else if (item.getItemId() == R.id.homeBottomNavigationPackages) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, packagesFragment).commit();
+                    getSupportFragmentManager().beginTransaction().
+                            replace(R.id.fragment_container, packagesFragment).commit();
                 }
                 return true;
             }
@@ -119,11 +123,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         int itemId = item.getItemId();
 
         if (itemId == R.id.homeMenuHome) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    homeFragment).commit();
         }
         if (itemId == R.id.homeMenuMyProfile) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myProfileFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    myProfileFragment).commit();
         }
+
         if (itemId == R.id.homeMenusettings) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, settingsFragment).commit();
         }
@@ -164,7 +171,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private void logout() {
 
         AlertDialog.Builder ad = new AlertDialog.Builder(HomeActivity.this);
-        ad.setTitle("Blood Bank");
+        ad.setTitle("TripzyyApp");
         ad.setMessage("Are you sure you want to logout?");
         ad.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
             @Override

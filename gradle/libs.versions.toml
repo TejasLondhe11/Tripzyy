@@ -13,6 +13,7 @@ annotation = "1.9.1"
 legacySupportV4 = "1.0.0"
 supportV4 = "28.0.0"
 supportV13 = "28.0.0"
+preference = "1.2.1"
 
 [libraries]
 firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
@@ -28,6 +29,7 @@ annotation = { group = "androidx.annotation", name = "annotation", version.ref =
 legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 support-v4 = { group = "com.android.support", name = "support-v4", version.ref = "supportV4" }
 support-v13 = { group = "com.android.support", name = "support-v13", version.ref = "supportV13" }
+preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

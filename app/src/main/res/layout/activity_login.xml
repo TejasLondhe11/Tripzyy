@@ -4,25 +4,26 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/page_background"
+    android:background="@drawable/login_bg"
     android:padding="23dp">
 
     <LinearLayout
         android:id="@+id/font"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="347dp"
+        android:layout_height="334dp"
         android:layout_gravity="center"
+        android:layout_marginTop="200dp"
         android:background="@drawable/form_background"
         android:elevation="10dp"
         android:orientation="vertical"
         android:padding="25dp">
 
         <!-- Member Login Title -->
-      <ImageView
-          android:layout_width="wrap_content"
-          android:layout_height="70dp"
-          android:src="@drawable/login_image"
-          android:paddingBottom="12dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:paddingBottom="12dp"
+            android:src="@drawable/login_image" />
 
         <!-- Username Field -->
         <LinearLayout
@@ -36,8 +37,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:padding="5dp"
-                android:src="@drawable/icon_account"
-               />
+                android:src="@drawable/icon_account_circle_24" />
 
             <EditText
                 android:id="@+id/etLoginUsername"
@@ -63,20 +63,18 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:padding="5dp"
-                android:src="@drawable/icon_lock"
-              />
+                android:src="@drawable/icon_lock_outline_24" />
             <EditText
                 android:id="@+id/etLoginPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
+                android:fontFamily="@font/adamina"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:fontFamily="@font/adamina"
-                android:textColor="@android:color/black"
                 android:password="false"
-               />
+                android:textColor="@android:color/black" />
 
 
         </LinearLayout>
@@ -119,27 +117,29 @@
             android:textColor="@color/black"
             android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/tvLoginNewUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:paddingTop="20dp"
-            android:text="New User? Click Here"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            android:fontFamily="@font/adamina"
-            />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnLoginSignInWithGoogle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25sp"
-            android:text="Sign In with Google"
-            android:background="@drawable/common_google_signin_btn_text_light_normal"
-            android:textColor="@color/black" />
+
+
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLoginNewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/adamina"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="New User? Click Here"
+        android:textColor="@color/purple"
+        android:textSize="14sp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLoginSignInWithGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/common_google_signin_btn_text_light_normal"
+        android:text="Sign In with Google"
+        android:textColor="@color/black" />
 </LinearLayout>
