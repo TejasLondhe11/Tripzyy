@@ -9,18 +9,25 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
-
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.travelgo.tripzyy.MyProfileFragment;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
         BottomNavigationView.OnNavigationItemSelectedListener{
@@ -30,6 +37,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
     Toolbar toolbar;
+    AppCompatButton btnSignOut;
+
+    ViewPager2 imageSlider;
+    GoogleSignInOptions googleSignInOptions; //shows option of gmail;
+    GoogleSignInClient googleSignInClient;
 
     boolean doubletap = false;
 
@@ -39,7 +51,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     HomeFragment homeFragment = new HomeFragment();
     PackagesFragment packagesFragment = new PackagesFragment();
     PaymentFragment paymentFragment = new PaymentFragment();
-
 
     MyProfileFragment myProfileFragment = new MyProfileFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
@@ -56,6 +67,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         bottomNavigationView = findViewById(R.id.homeBottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
+
+        imageSlider = findViewById(R.id.imageSlider);
 
         drawerLayout = findViewById(R.id.homeDrawerLayout);
         navigationView = findViewById(R.id.nav_view);
@@ -189,6 +202,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         }).create().show();
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

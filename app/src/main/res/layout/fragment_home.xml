@@ -1,19 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
-   >
+    tools:context=".HomeActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Search for travel..."
+        android:padding="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"/>
+
+    <!-- Image Slider -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imageSlider"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="HOME"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/white"/>
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
 
-</FrameLayout>
+    <!-- Special Offers Section Title -->
+    <TextView
+        android:id="@+id/specialOffersTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Special Offers"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imageSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"/>
+
+    <!-- Horizontal Scroll RecyclerView for Special Offers -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/specialOffersTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

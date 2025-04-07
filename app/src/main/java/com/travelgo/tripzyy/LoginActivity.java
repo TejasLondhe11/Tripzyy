@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.media.MediaTimestamp;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -15,21 +14,15 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.travelgo.tripzyy.MyProfileFragment;
 import com.travelgo.tripzyy.common.NetworkChangeListener;
 import com.travelgo.tripzyy.common.Urls;
 //import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -63,8 +56,8 @@ public class LoginActivity extends AppCompatActivity {
    GoogleSignInClient googleSignInClient; //selected gmail option store
     AppCompatButton btnSignInWithGoogle;
 
-    SharedPreferences preferences;
-    SharedPreferences.Editor editor;
+    SharedPreferences preferences; //temp data store
+    SharedPreferences.Editor editor; // data put sharedpreferences
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
