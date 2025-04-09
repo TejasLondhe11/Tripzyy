@@ -37,7 +37,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     SharedPreferences.Editor editor;
 
     HomeFragment homeFragment = new HomeFragment();
-    PackagesFragment packagesFragment = new PackagesFragment();
+    PackageFragment packagesFragment = new PackageFragment();
     PaymentFragment paymentFragment = new PaymentFragment();
 
 
