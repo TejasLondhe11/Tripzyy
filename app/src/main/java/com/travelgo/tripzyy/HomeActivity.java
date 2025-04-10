@@ -38,7 +38,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     HomeFragment homeFragment = new HomeFragment();
     PackageFragment packagesFragment = new PackageFragment();
-    PaymentFragment paymentFragment = new PaymentFragment();
+     BookingFragment bookingFragment = new BookingFragment();
 
 
     MyProfileFragment myProfileFragment = new MyProfileFragment();
@@ -81,10 +81,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 if (item.getItemId() == R.id.homeBottomNavigationHome) {
                     getSupportFragmentManager().beginTransaction().
                             replace(R.id.fragment_container, homeFragment).commit();
-                } else if (item.getItemId() == R.id.homeBottomNavigationPayment) {
+                } else if (item.getItemId() == R.id.homeBottomNavigationBooking) {
                     getSupportFragmentManager().beginTransaction().
-                            replace(R.id.fragment_container, paymentFragment).commit();
-                } else if (item.getItemId() == R.id.homeBottomNavigationVehicles) {
+                            replace(R.id.fragment_container, bookingFragment).commit();
+                }
+                else if (item.getItemId() == R.id.homeBottomNavigationVehicles) {
                     getSupportFragmentManager().beginTransaction().
                             replace(R.id.fragment_container, vehiclesFragment).commit();
                 }else if (item.getItemId() == R.id.homeBottomNavigationPackages) {
@@ -158,8 +159,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         if (item.getItemId() == R.id.homeBottomNavigationVehicles) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, vehiclesFragment).commit();
         }
-        if (item.getItemId() == R.id.homeBottomNavigationPayment) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, paymentFragment).commit();
+        if (item.getItemId() == R.id.homeBottomNavigationBooking) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, bookingFragment).commit();
         }
 
 

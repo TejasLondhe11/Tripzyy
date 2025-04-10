@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/terms_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TermsAndConditionsFragment">
+    android:orientation="vertical"
+    android:padding="24dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-       android:textAlignment="center"
-        android:text="Terms and conditions" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/tvTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Terms And Conditions \n\nWelcome to Tripzyy! \n Please read these Terms and Conditions  carefully before using our app and services.
+
+\n\n 1. Booking and Payments
+- You must ensure that all information provided during the booking process is accurate and complete.
+- Bookings are not confirmed until payment has been successfully processed.
+- We reserve the right to cancel bookings due to invalid payment or incomplete information.
+
+\n\n 2. Cancellation and Refund Policy
+- Cancellation policies vary depending on the airline or service provider. Please check the specific policy before booking.
+- Some bookings may be non-refundable or may incur a cancellation fee.
+- Refunds, if applicable, will be processed within 7–14 business days.
+
+\n\n3. Travel Documents and Responsibility
+- It is your responsibility to ensure you have valid travel documents, such as passports, visas, and health certificates.
+- We are not liable for denied boarding or entry due to incomplete or invalid documentation.
+
+\n\n4. Flight Delays and Changes
+- We do not guarantee flight times or availability.
+- Flight schedules may change due to weather, air traffic, or operational needs. We are not liable for delays or missed connections.
+
+\n\n5. User Conduct
+- You agree not to misuse the app or interfere with its operation.
+- Any fraudulent, abusive, or illegal activity may lead to termination of your account.
+
+\n\n6. Changes to Terms
+- We reserve the right to modify these Terms at any time. Continued use of the app after changes constitutes your acceptance of the new Terms.
+
+\n\n7. Contact Us
+If you have any questions about these Terms, please contact us at support@tripzyy.com.
+"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/checkAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I agree to the Terms and Conditions" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textColor="@color/black"
+        android:enabled="false"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

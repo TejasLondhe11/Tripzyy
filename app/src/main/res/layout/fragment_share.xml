@@ -5,10 +5,50 @@
     android:layout_height="match_parent"
     tools:context=".ShareFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/shareFragmentLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/shareAppText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Our App"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/shareToWhatsApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share on WhatsApp"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/shareToInstagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share on Instagram"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/shareToTelegram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share on Telegram"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
 
 </FrameLayout>

@@ -15,8 +15,8 @@
         android:icon="@drawable/baseline_directions_bus_filled_24"
         />
     <item
-        android:id="@+id/homeBottomNavigationPayment"
-        android:title="Payment"
+        android:id="@+id/homeBottomNavigationBooking"
+        android:title="Booking"
         android:icon="@drawable/baseline_payment_24"/>
 
 

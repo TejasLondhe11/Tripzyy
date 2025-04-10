@@ -1,19 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
-   >
+    tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="HOME"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/white"/>
+        android:background="@drawable/page_bg"
+        android:orientation="vertical">
 
-</FrameLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/etSearchPropertyCategory"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingEnd="15dp"
+            android:background="@drawable/button_shape"
+            android:queryHint="Search"
+            app:searchIcon="@drawable/icon_search"
+            android:singleLine="true"
+            android:textSize="10sp"
+            app:queryHint="Search for package"
+            app:iconifiedByDefault="false" />
+
+
+        <!--<androidx.cardview.widget.CardView
+            android:id="@+id/cardViewImageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp">
+
+           <androidx.viewpager.widget.ViewPager
+                android:id="@+id/homeImageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="20"
+                app:iss_delay="2000"
+                app:iss_period="1000"
+                />
+
+        </androidx.cardview.widget.CardView>-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:layout_marginEnd="10sp"
+            android:src="@drawable/india_images"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Special Offers...>>"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="20sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="80sp"
+                    android:layout_height="250sp"
+                    android:layout_margin="15sp"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="15sp"
+                    app:cardElevation="20sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140sp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/paragliding_image"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="High Fly"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Paragliding ,River Rafting"
+                            android:textColor="@color/blue"
+                            android:layout_marginStart="10sp"
+                            android:layout_gravity="center"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Panchgani, Maharashtra"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/icon_location"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="5sp"
+                            android:text="Book Now"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvHomeYoga"
+                    android:layout_width="80sp"
+                    android:layout_height="250sp"
+                    android:layout_margin="15sp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="15sp"
+                    app:cardElevation="20sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="10sp"
+                            android:src="@drawable/reachskies_image"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reach Skies"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hot Air Bollon"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lonavala, Maharashtra"
+                            android:drawableStart="@drawable/icon_location"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="20dp"
+                            android:text="Book Now"
+                            android:layout_marginEnd="10sp"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="80sp"
+                    android:layout_height="250sp"
+                    android:layout_margin="15sp"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="15sp"
+                    app:cardElevation="20sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140sp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/paragliding_image"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Refreshing sunbath"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="sunbath, Mumbai"
+                            android:textColor="@color/blue"
+                            android:layout_marginStart="10sp"
+                            android:layout_gravity="center"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Juhu, Maharashtra"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/icon_location"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="5sp"
+                            android:text="Book Now"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80sp"
+                    android:layout_height="250sp"
+                    android:layout_margin="15sp"
+                    android:layout_weight="2"
+                    app:cardCornerRadius="15sp"
+                    app:cardElevation="20sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="10sp"
+                            android:src="@drawable/reachskies_image"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reach Skies   "
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hot Air Bollon"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:textSize="13sp"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lonavala, Maharashtra"
+                            android:drawableStart="@drawable/icon_location"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="20dp"
+                            android:text="Book Now"
+                            android:layout_marginEnd="10sp"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
