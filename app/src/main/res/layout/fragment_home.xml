@@ -85,7 +85,7 @@
                 <androidx.cardview.widget.CardView
 
                     android:layout_width="80sp"
-                    android:layout_height="250sp"
+                    android:layout_height="270sp"
                     android:layout_margin="15sp"
                     android:layout_gravity="center"
                     android:layout_weight="2"
@@ -138,7 +138,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="22dp"
                             android:layout_gravity="end"
-                            android:layout_marginTop="10sp"
+                            android:layout_marginTop="20sp"
                             android:layout_marginEnd="5sp"
                             android:text="Book Now"
                             android:textColor="@color/blue"
@@ -151,7 +151,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvHomeYoga"
                     android:layout_width="80sp"
-                    android:layout_height="250sp"
+                    android:layout_height="270sp"
                     android:layout_margin="15sp"
                     android:layout_weight="2"
                     app:cardCornerRadius="15sp"
@@ -167,12 +167,12 @@
                             android:layout_height="100dp"
                             android:scaleType="centerCrop"
                             android:layout_marginTop="10sp"
-                            android:src="@drawable/reachskies_image"/>
+                            android:src="@drawable/wetnjoylonavla_img"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Reach Skies"
+                            android:text="Wet'n Joy"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:layout_gravity="center"
@@ -182,7 +182,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hot Air Bollon"
+                            android:text="All rides"
                             android:textColor="@color/blue"
                             android:layout_gravity="center"
                             android:textSize="13sp"
@@ -199,7 +199,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="30sp"
                             android:text="Book Now"
                             android:layout_marginEnd="10sp"
                             android:textColor="@color/blue"
@@ -240,12 +240,12 @@
                             android:layout_marginTop="10sp"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/paragliding_image"/>
+                            android:src="@drawable/aalibag_img"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Refreshing sunbath"
+                            android:text="Alibag"
                             android:layout_gravity="center"
                             android:textColor="@color/black"
                             android:textSize="18sp"
@@ -255,7 +255,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="sunbath, Mumbai"
+                            android:text="beach, Mumbai"
                             android:textColor="@color/blue"
                             android:layout_marginStart="10sp"
                             android:layout_gravity="center"
@@ -265,7 +265,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Juhu, Maharashtra"
+                            android:text="Alibag, Maharashtra"
                             android:layout_gravity="center"
                             android:drawableStart="@drawable/icon_location"
                             android:layout_marginTop="5dp"/>
@@ -307,9 +307,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Reach Skies   "
+                            android:text="Kolad River Rafting"
                             android:textColor="@color/black"
                             android:textSize="18sp"
+                            android:layout_marginStart="10sp"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"/>
@@ -317,7 +318,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hot Air Bollon"
+                            android:text="Tamhini Ghat"
                             android:textColor="@color/blue"
                             android:layout_gravity="center"
                             android:textSize="13sp"
@@ -326,7 +327,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Lonavala, Maharashtra"
+                            android:text="Raigad, Maharashtra"
                             android:drawableStart="@drawable/icon_location"
                             android:layout_marginTop="5dp"/>
 
@@ -334,7 +335,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="end"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
                             android:text="Book Now"
                             android:layout_marginEnd="10sp"
                             android:textColor="@color/blue"
